@@ -1,0 +1,133 @@
+
+	1. Algorithm (thuật toán)
+		- Định nghĩa: Là một bộ các chỉ dẫn được định nghĩa để giải quyết một vấn đề cụ thể.
+		- Đặc điểm:
+			+ Xác định rõ input và output
+			+ Các step phải được rõ ràng, thực hiện 1 nhiệm vụ duy nhất.
+			+ Độc lập với ngôn ngữ lập trình (có thể áp dụng cho mọi ngôn ngữ).
+		- Tại sao cần thuật toán
+			+ Developer luôn phải đối mặt với nhiều vấn đề cần phải giải quyết.
+			+ Học nhiều thuật toán sẽ giúp biết được nhiều kỹ thuật để có thể giải quyết các vấn đề hiệu quả.
+			+ Một vấn đề có thể giải quyết theo nhiều cách sử dụng nhiều thuật toán khác nhau.
+			+ Mọi thuật toán đều đi kèm việc đánh đổi, khi nhắc đến hiệu suất của nó.
+	
+	2. Phân tích để tìm được thuật toán hiệu quả nhất:
+		- Có 2 yếu tố:
+			+ Time conmplexity: thời gian để thuật toán chạy xong (dựa vào input size).
+			+ Space complexity: bộ nhớ cần để thuật toán chạy xong (dựa vào input size).
+		- Cách biểu diện độ phức tạp: sử dụng Asymptotic notation: là môt công cụ toán học, dùng để hiển thị 
+		thời gian và bộ nhớ.
+			+ Big O Notation: worst case complexity (trường hợp xấu nhất)
+			+ Omega Notation: best case complexity
+			+ Theta Notation: average case complexity
+		
+	3. Big O Notation
+		- Có 2 đặc điểm:
+			+ Hiển thị theo tham số đầu vào.
+			+ Tập trung vào trường hợp với input lớn thay vì những input nhỏ. 
+				Ví dụ 1:	function sum(n) {
+								let sum = 0;
+								for (let i = 0; i <= sum; i++) {
+									sum += i;
+								}
+								return sum;
+							}
+						--> số lần thực hiện các câu lệnh là n + 2 (time complexity)
+						--> thay đổi n: 1000000 + 2, 1000000000000 + 2 (bức tranh lớn)
+						--> có thể thấy 2 quá nhỏ so với n, xem như xấp xỉ n
+						--> n + 2 ~ n
+						--> n quyết định thời gian thực hiện và không phụ thuộc vào các bước extra 
+						(ở đây là 2 bước sum = 0, và return sum)
+						--> time complexity = O(n): mối quan hệ tuyến tính, khi n tăng thì thời gian thực hiện cũng tăng theo.
+				
+				Ví dụ 2: 	function summation(n) {
+								return (n * (n + 1)) / 2
+							}
+						--> time complexity = O(1): hằng số, input bao nhiêu cũng chỉ thực hiện 1 câu lệnh.
+			
+			+ Các loại time complexity:
+				O(1), O(2): hằng số
+				O(n): linear (tuyến tính)
+				O(n^2): quadratic
+				O(n^3): cubic
+				O(log(n)): kích thước đầu vào giảm một nửa sau mỗi lần tương tác
+			+ Các loại space complexity:
+				O(1), O(2): hằng số
+				O(n): linear (tuyến tính)
+				O(log(n))
+				
+	4. Big O Notation cho Object và Array:
+		- Object:
+			+ Add: O(1).
+			+ Remove: O(1)
+			+ Access: O(1)
+			+ Object.keys: O(n)
+			+ Object.values: O(n) 
+			+ Object.entries: O(n) 
+		- Array:
+			+ Add/remove last element: O(1)
+			+ Add/Remove first element: O(n) (reset index for all remaining elements)
+			+ Access: O(1)
+			+ Search O(n): maybe last element
+			+ Pop/Push: O(1)
+			+ Shift/Unshift/concat/slice/splice: O(n)
+			+ filter/map/forEach/reduce: O(n)
+			
+	5. Đệ quy
+		- Đinh nghĩa: là một function gọi lại chính nó, để giải quyết cùng 1 vấn đề với phạm vi nhỏ hơn.
+		- Đặc điểm:
+			+ Có base case, để dừng vòng lặp.
+			+ Đệ quy là cách giải quyết đơn giản nhất nhưng ko có nghĩa là nhanh nhất.
+	
+	5. Math Algorithm:
+		- Fibonacci
+		- Factorial (giai thừa)
+		- Prime (số nguyên tố)
+		- Power Of Two: 2^n
+		- Power Of Two (BitWise)
+		- Recursive Fibonacci (đệ quy)
+		- Recursive Factorial (đệ quy)
+		
+	6. Search Algorithm
+		- Linear search
+		- Binary search
+		- Recursive Binary Search
+	
+	https://replit.com/@dattruong88vn/Learn-Algorithm#index.js
+	
+	7. Sort Algorithm:
+		- Bubble Sort: Big-O = O(n^2)
+		- Insertion Sort: Big-O = O(n^2)
+		- Quick sort: Big-O = O(n^2)
+		- Merge sort: Big-O = O(nlog(n))
+		
+	8. Misc Problems
+		- Cartesian Product:
+		- Climbing Staircase
+		- Tower of Hanoi
+		
+	9. Một số techniques Algorithm:
+		- Bruce Force
+			+ Linear Search
+		- Greedy:
+			+ Dijkstra's algorithm
+			+ Prim's algorithm
+			+ Kruskal's algorithm;
+		- Divide and Conquer:
+			+ Binary Search
+			+ Quick Sort
+			+ Merge Sort
+			+ Tower of Hanoi
+		- Dynamic Programming:
+			+ Fibonacci
+			+ Climbing Staircase
+		- Backtracking:
+			+ N-Queens problem
+			
+	10. Homework
+		- Finding the GCD using Euclidian algorithm
+		- Finding permitations and combinations of a list of number
+		- Finding the longest common substring in a given string
+		- Knapsack problem
+		
+		
